@@ -52,7 +52,7 @@ def Ln(x:float):
     return solution
 
 
-def xtimesy (x:float,y:float):
+def XtimesY (x:float,y:float):
     if x<0:
         return 0.0
     if y==0:
@@ -68,13 +68,13 @@ def sqrt (x:float,y:float):
     if y==0:
         return 0.0
     if y<0 and even(x):
-        solution=xtimesy(-y, 1/x)
+        solution=XtimesY(-y, 1/x)
         return -1*solution
-    solution=xtimesy(y, 1/x)
+    solution=XtimesY(y, 1/x)
     return solution
 
 
 
 def calculate(x:float):
-    solution=exponent(x)*xtimesy(x,-1)*xtimesy(7,x)*sqrt(x,x)
+    solution=exponent(x)*XtimesY(x,-1)*XtimesY(7,x)*sqrt(x,x)
     return float('%0.6f' % solution)
